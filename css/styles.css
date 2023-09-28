@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #add3c9;
+    color: #00425A
+}
+
+
+footer {
+    background-color: #add3c9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
