@@ -5,34 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Tu Comercio Ecológico</title>
-
     <!-- Enlaces a los archivos CSS de Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="./Scripts/carrito.js" defer></script>
+    <script src="./Scripts/lista.js" defer></script>
 </head>
 
 <body>
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg class=" navbar" style="background-color: #BFDB38">
-        <div class="container">
-            <a class="navbar-brand" href="/index.html">Tu Comercio Ecológico</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Mi Perfil</a>
-                    <a class="nav-link" href="#">Configuración</a>
-                    <a class="nav-link" href="#">Carrito</a>
-                    <a class="nav-link" href="#">Historial de Compras</a>
-                    <a class="nav-link" href="#">Cerrar Sesión</a>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #04364A"">
+        <div class=" container">
+        <a class="navbar-brand" href="/index.html">Tu Comercio Ecológico</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" aria-current="page" href="#">Mi Perfil</a>
+                <a class="nav-link" href="#">Configuración</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="material-symbols-outlined"></span>
+                        Carrito
+                    </a>
+                </li>
+                <a class="nav-link" href="#">Historial de Compras</a>
+                <a class="nav-link" href="#">Cerrar Sesión</a>
             </div>
         </div>
+        </div>
     </nav>
-
-
     <!-- Campo de búsqueda -->
     <section class="container mt-3">
         <div class="row justify-content-center">
@@ -45,119 +49,42 @@
             </div>
         </div>
     </section>
+    <!--Carrito de compras-->
+    <section class="card d-flex shopping-car container mt-5">
+        <div class=" shopping-car-title">
+            <h2>Tu compra: </h2>
+            <p id="totalCarrito"></p>
+        </div>
+        <div class="shopping-car-items">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item align-items-center card d-flex" id="carrito-compras-lista">
+                    <img src="https://cdn-icons-png.flaticon.com/256/2975/2975185.png" class="img-item">
+                    <p>Producto Ecologico 1</p>
+                    <button type="button" class="btn btn-warning ">Eliminar</button>
+                    <p>$101 UDS</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Sección de Productos Ecológicos -->
     <section class="container mt-5">
         <h2 class="text-center">Productos Ecológicos Destacados</h2>
-        <div class="row">
+        <div class="container d-flex flex-row flex-wrap justify-content-around" id="catalogo-productos">
             <!-- Producto 1 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-1.jpg" class="card-img-top" alt="Producto Ecológico 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 1</h5>
-                        <p class="card-text">Descripción del producto ecológico 1.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-2.jpg" class="card-img-top" alt="Producto Ecológico 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 2</h5>
-                        <p class="card-text">Descripción del producto ecológico 2.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-3.jpg" class="card-img-top" alt="Producto Ecológico 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 3</h5>
-                        <p class="card-text">Descripción del producto ecológico 3.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 4 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-4.jpg" class="card-img-top" alt="Producto Ecológico 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 4</h5>
-                        <p class="card-text">Descripción del producto ecológico 4.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 5 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-5.jpg" class="card-img-top" alt="Producto Ecológico 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 5</h5>
-                        <p class="card-text">Descripción del producto ecológico 5.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 6 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-6.jpg" class="card-img-top" alt="Producto Ecológico 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 6</h5>
-                        <p class="card-text">Descripción del producto ecológico 6.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 7 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-7.jpg" class="card-img-top" alt="Producto Ecológico 7">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 7</h5>
-                        <p class="card-text">Descripción del producto ecológico 7.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 8 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="imagen-producto-8.jpg" class="card-img-top" alt="Producto Ecológico 8">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto Ecológico 8</h5>
-                        <p class="card-text">Descripción del producto ecológico 8.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Pie de página -->
-    <footer class="text-center py-3" style="background-color: #BFDB38">
+    <footer class="text-center py-3" style="background-color: #04364A">
         <div class="container">
             <p>&copy; 2023 Tu Comercio Electrónico</p>
         </div>
     </footer>
-
     <!-- Enlaces a los archivos JavaScript de Bootstrap (si es necesario) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>

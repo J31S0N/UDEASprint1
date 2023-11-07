@@ -1,19 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* Para que el scrolleo en la one page sea suave */
     scroll-behavior: smooth;
+    font-family: 'Prata', serif;
+    font-size: 17px;
 }
 
 body {
-    background-color: #add3c9;
-    color: #00425A
+    background-color: #DAFFFB;
 }
 
+a.nav-link {
+    display: flex;
+}
+
+.shopping-car {
+    position: fixed;
+    right: 0;
+    width: 275px;
+    height: 100%;
+    top: 0;
+    padding: 15px;
+}
+
+.shopping-car-title {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.img-item {
+    height: 50px !important;
+}
 
 footer {
-    background-color: #add3c9;
+    color: #BFDB38 !important;
     position: fixed;
     bottom: 0;
     width: 100%;
